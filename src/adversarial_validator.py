@@ -11,7 +11,7 @@ import anthropic
 from pathlib import Path
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
 client = anthropic.Anthropic()
 KB = Path(__file__).parent.parent / "knowledge_base"
